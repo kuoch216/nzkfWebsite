@@ -28,6 +28,45 @@
   color: #61dafb;
 }
 
+#header {
+  width: 950px;
+  height: 129px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-logo {
+  position:absolute;
+  left:0;
+  top: 29px;
+}
+
+.header-p{
+  position:absolute;
+  right: 0;
+  top: 40px;
+  font-size:10px; text-align: right;
+  color: #333333;
+}
+
+#header ul {
+  position:absolute;
+  right: 0;
+  top: 75px;
+}
+
+#header ul li {
+  float: left;
+}
+
+img {
+  border:0;
+}
+
+ul {
+  list-style-type: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
