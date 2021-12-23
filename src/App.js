@@ -2,13 +2,20 @@ import React from "react";
 import MenuBar from "./components/MenuBar";
 import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Kyudo from "./components/Kyudo";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div id="navbar">
-        {/* insert component here */}
-        <MenuBar />
+        <Router>
+          {/* insert component here */}
+          <MenuBar />
+          <Routes>
+            <Route path="Kyudo" element={<Kyudo />} />
+          </Routes>
+        </Router>
       </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -26,6 +33,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
