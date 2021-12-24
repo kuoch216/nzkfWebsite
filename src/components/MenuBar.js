@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import "./MenuBar.css";
 
-import Kyudo from "./Kyudo";
+import Kyudo from "../pages/Kyudo";
 
 const MenuBar = function() {
 
@@ -15,13 +15,13 @@ const MenuBar = function() {
             <NavLink to="/Kyudo">Kyudo</NavLink>
           </li>
           <li>
-            <label>NZKF</label>
+            <NavLink to="/NZKF">NZKF</NavLink>
           </li>
           <li>
-            <label>Locations</label>
+            <NavLink to="/Locations">Locations</NavLink>
           </li>
           <li>
-            <label>Contact Us</label>
+            <NavLink to="/ContactUs">Contact Us</NavLink>
           </li>
         </ul>
     </div>

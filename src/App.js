@@ -3,7 +3,12 @@ import MenuBar from "./components/MenuBar";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Kyudo from "./components/Kyudo";
+
+import Kyudo from "./pages/Kyudo";
+import Home from "./pages/Home";
+import Nzkf from "./pages/Nzkf";
+import Locations from "./components/LocationsBar";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (
@@ -13,24 +18,14 @@ const App = () => {
           {/* insert component here */}
           <MenuBar />
           <Routes>
+            <Route path="Home" element={<Home />} />
             <Route path="Kyudo" element={<Kyudo />} />
+            <Route path="NZKF" element={<Nzkf />} />
+            <Route path="Locations" element={<Locations />} />
+            <Route path="ContactUS" element={<ContactUs />} />
           </Routes>
         </Router>
       </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 };
